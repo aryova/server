@@ -174,16 +174,5 @@ class CategoryDataGrid extends DataGrid
             'action' => route('admin.catalog.categories.massdelete'),
             'method' => 'POST',
         ]);
-
-        $this->addMassAction([
-            'type'    => 'update',
-            'label'   => trans('admin::app.datagrid.update-status'),
-            'action'  => route('admin.catalog.categories.mass-update'),
-            'method'  => 'POST',
-            'options' => [
-                trans('admin::app.datagrid.active')    => 1,
-                trans('admin::app.datagrid.inactive')  => 0,
-            ],
-        ]);
     }
 }

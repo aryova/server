@@ -12,11 +12,9 @@
             </div>
 
             <div class="page-action">
-                @if (bouncer()->hasPermission('settings.inventory_sources.create'))
-                    <a href="{{ route('admin.inventory_sources.create') }}" class="btn btn-lg btn-primary">
-                        {{ __('admin::app.settings.inventory_sources.add') }}
-                    </a>
-                @endif
+                <a href="{{ route('admin.inventory_sources.create') }}" class="btn btn-lg btn-primary">
+                    {{ __('admin::app.settings.inventory_sources.add') }}
+                </a>
             </div>
         </div>
 

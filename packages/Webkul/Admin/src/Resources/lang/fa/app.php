@@ -716,7 +716,6 @@ return [
             'image'                    => 'تصویر',
             'filterable-attributes'    => 'ویژگی های فیلتر',
             'attributes'               => 'ویژگی های',
-            'mass-update-success'      => 'همه دسته های انتخابی با موفقیت به روز شدند',
         ],
     ],
 
@@ -1636,7 +1635,6 @@ return [
             'canceled'   => 'سفارش لغو شد',
             'pending'    => 'سفارش در انتظار',
             'processing' => 'پردازش سفارش',
-            'pending_payment' => 'در انتظار پرداخت',
         ],
     ],
 ];

@@ -12,11 +12,9 @@
             </div>
 
             <div class="page-action">
-                @if (bouncer()->hasPermission('catalog.families.create'))
-                    <a href="{{ route('admin.catalog.families.create') }}" class="btn btn-lg btn-primary">
-                        {{ __('admin::app.catalog.families.add-family-btn-title') }}
-                    </a>
-                @endif
+                <a href="{{ route('admin.catalog.families.create') }}" class="btn btn-lg btn-primary">
+                    {{ __('admin::app.catalog.families.add-family-btn-title') }}
+                </a>
             </div>
         </div>
 

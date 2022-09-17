@@ -716,7 +716,6 @@ return [
             'filterable-attributes'    => '
              „filterable-atrybuty” => „Filtrowalne atrybuty',
             'attributes'               => 'Atrybuty',
-            'mass-update-success'      => 'Wszystkie wybrane kategorie zostały pomyślnie zaktualizowane',
         ],
     ],
 
@@ -1625,7 +1624,6 @@ return [
             'canceled'   => 'Zamówienie anulowane',
             'pending'    => 'Zamówienie w trakcie realizacji',
             'processing' => 'przetwarzanie zamówienia',
-            'pending_payment' => 'oczekująca płatność',
         ],
     ],
 ];

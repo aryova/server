@@ -19,12 +19,9 @@ export default {
         toggle: function () {
             this.$root.toggleMenu();
 
-            if (
-                this.$root.isMenuOpen 
-                && this.iconClass == 'accordian-right-icon'
-            ) {
+            if(this.$root.isMenuOpen && this.iconClass == 'accordian-right-icon'){
                 this.iconClass = this.leftIconClass;
-            } else {
+            }else{
                 this.iconClass = this.rightIconClass;
             }
         },

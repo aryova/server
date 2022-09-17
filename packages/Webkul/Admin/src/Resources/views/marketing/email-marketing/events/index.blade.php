@@ -12,11 +12,9 @@
             </div>
 
             <div class="page-action">
-                @if (bouncer()->hasPermission('marketing.email-marketing.events.create'))
-                    <a href="{{ route('admin.events.create') }}" class="btn btn-lg btn-primary">
-                        {{ __('admin::app.marketing.events.add-title') }}
-                    </a>
-                @endif
+                <a href="{{ route('admin.events.create') }}" class="btn btn-lg btn-primary">
+                    {{ __('admin::app.marketing.events.add-title') }}
+                </a>
             </div>
         </div>
 

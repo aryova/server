@@ -16,14 +16,12 @@ $locale = core()->getRequestedLocaleCode();
             </div>
 
             <div class="page-action">
-                @if (bouncer()->hasPermission('catalog.categories.create'))
-                    <a
-                        href="{{ route('admin.catalog.categories.create') }}"
-                        class="btn btn-lg btn-primary"
-                    >
-                        {{ __('admin::app.catalog.categories.add-title') }}
-                    </a>
-                @endif
+                <a
+                    href="{{ route('admin.catalog.categories.create') }}"
+                    class="btn btn-lg btn-primary"
+                >
+                    {{ __('admin::app.catalog.categories.add-title') }}
+                </a>
             </div>
         </div>
 

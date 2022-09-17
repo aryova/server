@@ -19,11 +19,10 @@
                         {{ __('admin::app.export.export') }}
                     </span>
                 </div>
-                @if (bouncer()->hasPermission('cms.pages.create'))
-                    <a href="{{ route('admin.cms.create') }}" class="btn btn-lg btn-primary">
-                        {{ __('admin::app.cms.pages.add-title') }}
-                    </a>
-                @endif
+
+                <a href="{{ route('admin.cms.create') }}" class="btn btn-lg btn-primary">
+                    {{ __('admin::app.cms.pages.add-title') }}
+                </a>
             </div>
         </div>
 

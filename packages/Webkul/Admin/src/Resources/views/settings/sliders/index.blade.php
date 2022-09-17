@@ -18,11 +18,9 @@
             </div>
 
             <div class="page-action">
-                @if (bouncer()->hasPermission('settings.sliders.create'))
-                    <a href="{{ route('admin.sliders.store') }}" class="btn btn-lg btn-primary">
-                        {{ __('admin::app.settings.sliders.add-title') }}
-                    </a>
-                @endif
+                <a href="{{ route('admin.sliders.store') }}" class="btn btn-lg btn-primary">
+                    {{ __('admin::app.settings.sliders.add-title') }}
+                </a>
             </div>
         </div>
 

@@ -12,11 +12,9 @@
             </div>
 
             <div class="page-action">
-                @if (bouncer()->hasPermission('settings.users.roles.create')) 
-                    <a href="{{ route('admin.roles.create') }}" class="btn btn-lg btn-primary">
-                        {{ __('admin::app.users.roles.add-role-title') }}
-                    </a>
-                @endif
+                <a href="{{ route('admin.roles.create') }}" class="btn btn-lg btn-primary">
+                    {{ __('admin::app.users.roles.add-role-title') }}
+                </a>
             </div>
         </div>
 

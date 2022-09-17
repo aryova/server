@@ -46,11 +46,10 @@
                         {{ __('admin::app.export.export') }}
                     </span>
                 </div>
-                @if (bouncer()->hasPermission('settings.taxes.tax-rates.create'))
-                    <a href="{{ route('admin.tax-rates.create') }}" class="btn btn-lg btn-primary">
-                        {{ __('admin::app.settings.tax-rates.add-title') }}
-                    </a>
-                @endif
+
+                <a href="{{ route('admin.tax-rates.create') }}" class="btn btn-lg btn-primary">
+                    {{ __('admin::app.settings.tax-rates.add-title') }}
+                </a>
             </div>
         </div>
 

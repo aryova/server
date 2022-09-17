@@ -721,7 +721,6 @@ return [
             'image'                    => 'Görsel',
             'filterable-attributes'    => 'Filtrelenebilir Nitelikler',
             'attributes'               => 'Nitelikler',
-            'mass-update-success'      => 'All the selected categories have been updated successfully',
         ],
     ],
 
@@ -1591,7 +1590,6 @@ return [
             'set-order-status'                      => 'Faturayı oluşturduktan sonra sipariş durumunu ayarlayın.',
             'generate-invoice-applicable'           => 'Otomatik fatura oluştur etkinse geçerlidir',
             'records-found'                         => 'Kayıt(lar) bulundu',
-
         ],
     ],
 
@@ -1635,7 +1633,6 @@ return [
             'canceled'   => 'Sipariş İptal Edildi',
             'pending'    => 'Sipariş beklemede',
             'processing' => 'sipariş düzenleniyor',
-            'pending_payment' => 'bekleyen ödeme',
         ],
     ],
 ];

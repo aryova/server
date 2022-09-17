@@ -12,11 +12,9 @@
             </div>
 
             <div class="page-action">
-                @if (bouncer()->hasPermission('marketing.sitemaps.create'))
-                    <a href="{{ route('admin.sitemaps.create') }}" class="btn btn-lg btn-primary">
-                        {{ __('admin::app.marketing.sitemaps.add-title') }}
-                    </a>
-                @endif
+                <a href="{{ route('admin.sitemaps.create') }}" class="btn btn-lg btn-primary">
+                    {{ __('admin::app.marketing.sitemaps.add-title') }}
+                </a>
             </div>
         </div>
 

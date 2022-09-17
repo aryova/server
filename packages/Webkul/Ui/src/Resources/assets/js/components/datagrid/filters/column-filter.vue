@@ -603,8 +603,7 @@ export default {
                     response: isEncoded
                         ? encodeURIComponent(this.types[type].value)
                         : this.types[type].value,
-                    label,
-                    type
+                    label
                 }
             });
         },

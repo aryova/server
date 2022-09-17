@@ -104,10 +104,6 @@ Route::group(['middleware' => ['web', 'admin'], 'prefix' => config('app.admin_ur
             'redirect' => 'admin.catalog.categories.index',
         ])->name('admin.catalog.categories.massdelete');
 
-        Route::post('categories/mass-update', [CategoryController::class, 'massUpdate'])->defaults('_config', [
-            'redirect' => 'admin.catalog.categories.index',
-        ])->name('admin.catalog.categories.mass-update');
-
         Route::post('/categories/product/count', [CategoryController::class, 'categoryProductCount'])->name('admin.catalog.categories.product.count');
 
         /**

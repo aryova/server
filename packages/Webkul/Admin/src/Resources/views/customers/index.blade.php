@@ -19,11 +19,10 @@
                         {{ __('admin::app.export.export') }}
                     </span>
                 </div>
-                @if (bouncer()->hasPermission('customers.customers.create'))
-                    <a href="{{ route('admin.customer.create') }}" class="btn btn-lg btn-primary">
-                        {{ __('admin::app.customers.customers.add-title') }}
-                    </a>
-                @endif
+
+                <a href="{{ route('admin.customer.create') }}" class="btn btn-lg btn-primary">
+                    {{ __('admin::app.customers.customers.add-title') }}
+                </a>
             </div>
         </div>
 

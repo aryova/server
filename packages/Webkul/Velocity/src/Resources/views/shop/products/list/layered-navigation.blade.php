@@ -2,8 +2,8 @@
     {!! view_render_event('bagisto.shop.products.list.layered-nagigation.before') !!}
 
     <layered-navigation
-        attribute-src="{{ route('catalog.categories.filterable-attributes', $category->id ?? null) }}"
-        max-price-src="{{ route('catalog.categories.maximum-price', $category->id ?? null) }}">
+        attribute-src="{{ route('admin.catalog.products.get-filter-attributes', $category->id ?? null) }}"
+        max-price-src="{{ route('admin.catalog.products.get-category-product-maximum-price', $category->id ?? null) }}">
     </layered-navigation>
 
     {!! view_render_event('bagisto.shop.products.list.layered-nagigation.after') !!}
@@ -176,25 +176,18 @@
             data: function() {
                 return {
                     active: false,
-
                     appliedFilters: [],
-
                     sliderConfig: {
                         max: 500,
-
                         value: [0, 0],
-
                         processStyle: {
                             "backgroundColor": "#FF6472"
                         },
-
                         tooltipStyle: {
                             "borderColor": "#FF6472",
                             "backgroundColor": "#FF6472",
                         },
-
                         priceTo: 0,
-
                         priceFrom: 0,
                     }
                 }
@@ -220,14 +213,11 @@
 
             methods: {
                 setMaxPrice: function () {
-                    if (this.attribute['code'] != 'price') {
-                        return;
-                    }
-
                     axios
                         .get(this.maxPriceSrc)
                         .then((response) => {
                             let maxPrice  = response.data.max_price;
+
                             this.sliderConfig.max = maxPrice ? ((parseInt(maxPrice) !== 0 || maxPrice) ? parseInt(maxPrice) : 500) : 500;
                             
                             if (! this.appliedFilterValues) { 

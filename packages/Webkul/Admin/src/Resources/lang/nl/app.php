@@ -715,7 +715,6 @@ return [
             'image'                    => 'Afbeelding',
             'filterable-attributes'    => 'Filtreerbare kenmerken',
             'attributes'               => 'Attributen',
-            'mass-update-success'      => 'Alle geselecteerde categorieën zijn met succes bijgewerkt',
         ],
     ],
 
@@ -1636,7 +1635,6 @@ return [
             'canceled'   => 'Bestelling geannuleerd',
             'pending'    => 'Order in behandeling',
             'processing' => 'Orderverwerking',
-            'pending_payment' => 'In afwachting van betaling',
         ],
     ],
 ];

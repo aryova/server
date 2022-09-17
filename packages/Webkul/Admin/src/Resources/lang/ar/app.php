@@ -731,7 +731,6 @@ return [
             'image'                    => 'صورة',
             'filterable-attributes'    => 'سمات قابلة للفلترة',
             'attributes'               => 'السمات',
-            'mass-update-success'      => 'تم تحديث جميع الفئات المحددة بنجاح',
         ],
     ],
 
@@ -1659,7 +1658,6 @@ return [
             'canceled'   => 'تم إلغاء الطلب',
             'pending'    => 'انتظار الطلب',
             'processing' => 'معالجة الطلب',
-            'pending_payment' => 'في انتظار الدفع',
         ],
     ],
 ];
