@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Webkul\Velocity\Database\Seeders\VelocityMetaDataSeeder;
+use Webkul\Admin\Database\Seeders\DatabaseSeeder as BagistoDatabaseSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -14,6 +15,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $this->call(BagistoDatabaseSeeder::class);
+        $this->call(VelocityMetaDataSeeder::class);
     }
 }
