@@ -75,7 +75,7 @@
 
         {!! view_render_event('bagisto.shop.layout.footer.after') !!}
 
-        @if (core()->getConfigData('general.content.footer.footer_toggle'))
+        {{-- @if (core()->getConfigData('general.content.footer.footer_toggle'))
             <div class="footer">
                 <p style="text-align: center;">
                     @if (core()->getConfigData('general.content.footer.footer_content'))
@@ -85,7 +85,7 @@
                     @endif
                 </p>
             </div>
-        @endif
+        @endif --}}
 
         <overlay-loader :is-open="show_loader"></overlay-loader>
 

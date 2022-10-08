@@ -1413,7 +1413,7 @@ return [
     ],
 
     'footer' => [
-        'copy-right' => 'Powered by <a href="https://bagisto.com/" target="_blank" rel="nofollow">Bagisto</a>, 一个社区项目 <a href="https://webkul.com/" target="_blank" rel="nofollow">Webkul</a>',
+        'copy-right' => 'Powered by <a href="https://aryova.com/" target="_blank" rel="nofollow">aryova.com</a>',
     ],
 
     'admin' => [

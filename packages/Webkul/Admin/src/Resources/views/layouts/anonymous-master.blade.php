@@ -94,7 +94,7 @@
 
                     {!! view_render_event('bagisto.admin.layout.content.after') !!}
 
-                    @if (core()->getConfigData('general.content.footer.footer_toggle'))
+                    {{-- @if (core()->getConfigData('general.content.footer.footer_toggle'))
                         <div class="footer">
                             <p style="text-align: center;">
                                 @if (core()->getConfigData('general.content.footer.footer_content'))
@@ -104,7 +104,7 @@
                                 @endif
                             </p>
                         </div>
-                    @endif
+                    @endif --}}
                 </div>
 
             </div>
