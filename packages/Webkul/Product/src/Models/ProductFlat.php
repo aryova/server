@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Searchable;
 use Webkul\Attribute\Repositories\AttributeRepository;
 use Webkul\Product\Contracts\ProductFlat as ProductFlatContract;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Webkul\Category\Models\CategoryProxy;
 
 class ProductFlat extends Model implements ProductFlatContract
 {
@@ -49,7 +51,13 @@ class ProductFlat extends Model implements ProductFlatContract
     {
         return 'products_index';
     }
-
+    public function toSearchableArray()
+    {
+        $arr = $this->toArray();
+        $arr["images"] = $this->images()->get();
+        $arr["categories"] = $this->categories();
+        return $arr;
+    }
     /**
      * Get an attribute from the model.
      *
@@ -59,9 +67,9 @@ class ProductFlat extends Model implements ProductFlatContract
     public function getAttribute($key)
     {
         if (
-            ! method_exists(static::class, $key)
-            && ! in_array($key, $this->ignorableAttributes)
-            && ! isset($this->attributes[$key])
+            !method_exists(static::class, $key)
+            && !in_array($key, $this->ignorableAttributes)
+            && !isset($this->attributes[$key])
             && isset($this->id)
         ) {
             $attribute = core()
@@ -70,8 +78,7 @@ class ProductFlat extends Model implements ProductFlatContract
 
             if (
                 $attribute
-                && (
-                    $attribute->value_per_channel
+                && ($attribute->value_per_channel
                     || $attribute->value_per_locale
                 )
             ) {
@@ -134,6 +141,19 @@ class ProductFlat extends Model implements ProductFlatContract
     public function variants()
     {
         return $this->hasMany(static::class, 'parent_id');
+    }
+
+
+
+    /**
+     * The categories that belong to the product.
+     *
+     *
+     */
+    public function categories()
+    {
+       $cats = $this->product()->get()[0]->categories()->get();
+       return $cats;
     }
 
     /**
