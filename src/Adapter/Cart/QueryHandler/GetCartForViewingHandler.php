@@ -40,6 +40,7 @@ use PrestaShop\PrestaShop\Core\Domain\Cart\Query\GetCartForViewing;
 use PrestaShop\PrestaShop\Core\Domain\Cart\QueryHandler\GetCartForViewingHandlerInterface;
 use PrestaShop\PrestaShop\Core\Domain\Cart\QueryResult\CartView;
 use PrestaShop\PrestaShop\Core\Localization\Locale;
+use PrestaShop\PrestaShop\Core\Util\Sorter;
 use Product;
 use StockAvailable;
 use Validate;
@@ -116,6 +117,10 @@ final class GetCartForViewingHandler implements GetCartForViewingHandlerInterfac
             $total_price = $summary['total_price'];
             $total_shipping = $summary['total_shipping'];
         }
+
+        // Sort products by Reference ID (and if equals (like combination) by Supplier Reference)
+        $sorter = new Sorter();
+        $products = $sorter->natural($products, Sorter::ORDER_DESC, 'reference', 'supplier_reference');
 
         foreach ($products as &$product) {
             if ($tax_calculation_method == PS_TAX_EXC) {
@@ -221,7 +226,8 @@ final class GetCartForViewingHandler implements GetCartForViewingHandlerInterfac
                 'unit_price' => $product['product_price'],
                 'total_price_formatted' => $this->locale->formatPrice($product['product_total'], $currency->iso_code),
                 'unit_price_formatted' => $this->locale->formatPrice($product['product_price'], $currency->iso_code),
-                'image' => $this->imageManager->getThumbnailForListing($image['id_image']),
+                // it is possible that there is no image for product, so we don't show anything, but at least avoid breaking whole page
+                'image' => isset($image['id_image']) ? $this->imageManager->getThumbnailForListing($image['id_image']) : '',
             ];
 
             if (isset($product['customizationQuantityTotal'])) {
