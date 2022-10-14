@@ -22,20 +22,19 @@
  * @copyright Since 2007 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
-<div class="modal fade js-checkout-modal" id="modal">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <button type="button" class="close" data-dismiss="modal" aria-label="{l s='Close' d='Shop.Theme.Global'}">
-        <span aria-hidden="true">&times;</span>
-      </button>
-      <div class="js-modal-content"></div>
-    </div>
-  </div>
-</div>
+{extends file='page.tpl'}
 
-<div class="text-sm-center">
-  {if $tos_cms != false}
-    <span class="d-block js-terms">{$tos_cms nofilter}</span>
-  {/if}
-  {l s='%copyright% %year% - Ecommerce software by %prestashop%' sprintf=['%prestashop%' => 'PrestaShop™', '%year%' => 'Y'|date, '%copyright%' => '©'] d='Shop.Theme.Global'}
-</div>
+{block name="breadcrumb"}{/block}
+
+{block name='page_title'}
+  {$page.title}
+{/block}
+
+{capture assign="errorContent"}
+  <h4>{l s='No products available' d='Shop.Theme.Catalog'}</h4>
+  <p>{l s='Stay tuned! More products will be shown here as they are added.' d='Shop.Theme.Catalog'}</p>
+{/capture}
+
+{block name='page_content_container'}
+  {include file='errors/not-found.tpl' errorContent=$errorContent}
+{/block}

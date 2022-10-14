@@ -22,20 +22,23 @@
  * @copyright Since 2007 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
-<div class="modal fade js-checkout-modal" id="modal">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <button type="button" class="close" data-dismiss="modal" aria-label="{l s='Close' d='Shop.Theme.Global'}">
-        <span aria-hidden="true">&times;</span>
-      </button>
-      <div class="js-modal-content"></div>
+{block name='account_transformation_form'}
+  <h4>{l s='Save time on your next order, sign up now' d='Shop.Theme.Checkout'}</h4>
+  <ul>
+    <li> - {l s='Personalized and secure access' d='Shop.Theme.Customeraccount'}</li>
+    <li> - {l s='Fast and easy checkout' d='Shop.Theme.Customeraccount'}</li>
+    <li> - {l s='Easier merchandise return' d='Shop.Theme.Customeraccount'}</li>
+  </ul>
+  <form method="post">
+    <div class="form-group">
+      <label class="form-control-label required" for="field-email">
+        {l s='Set your password:' d='Shop.Forms.Labels'}
+      </label>
+      <input type="password" class="form-control" data-validate="isPasswd" required name="password" value="">
     </div>
-  </div>
-</div>
-
-<div class="text-sm-center">
-  {if $tos_cms != false}
-    <span class="d-block js-terms">{$tos_cms nofilter}</span>
-  {/if}
-  {l s='%copyright% %year% - Ecommerce software by %prestashop%' sprintf=['%prestashop%' => 'PrestaShop™', '%year%' => 'Y'|date, '%copyright%' => '©'] d='Shop.Theme.Global'}
-</div>
+    <footer class="form-footer">
+      <input type="hidden" name="submitTransformGuestToCustomer" value="1">
+      <button class="btn btn-primary" type="submit">{l s='Create account' d='Shop.Theme.Actions'}</button>
+    </footer>
+  </form>
+{/block}

@@ -1,3 +1,4 @@
+
 {**
  * Copyright since 2007 PrestaShop SA and Contributors
  * PrestaShop is an International Registered Trademark & Property of PrestaShop SA
@@ -22,31 +23,33 @@
  * @copyright Since 2007 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
-{extends file='customer/page.tpl'}
 
-{block name='page_title'}
-  {l s='Your addresses' d='Shop.Theme.Customeraccount'}
-{/block}
-
-{block name='page_content'}
-  {if $customer.addresses}
-    {foreach $customer.addresses as $address}
-      <div class="col-lg-4 col-md-6 col-sm-6">
-      {block name='customer_address'}
-        {include file='customer/_partials/block-address.tpl' address=$address}
-      {/block}
+<template id="password-feedback">
+  <div
+    class="password-strength-feedback mt-1"
+    style="display: none;"
+  >
+    <div class="progress-container">
+      <div class="progress mb-1">
+        <div class="progress-bar" role="progressbar" value="50" aria-valuemin="0" aria-valuemax="100"></div>
       </div>
-    {/foreach}
-  {else}
-    <div class="alert alert-info" role="alert" data-alert="info">
-      {l s='No addresses are available.' d='Shop.Notifications.Success'} <a href="{$urls.pages.address}" title="{l s='Add a new address' d='Shop.Theme.Actions'}">{l s='Add a new address' d='Shop.Theme.Actions'}</a>
     </div>
-  {/if}
-  <div class="clearfix"></div>
-  <div class="addresses-footer">
-    <a href="{$urls.pages.address}" data-link-action="add-address">
-      <i class="material-icons">&#xE145;</i>
-      <span>{l s='Create new address' d='Shop.Theme.Actions'}</span>
-    </a>
+    <script type="text/javascript" class="js-hint-password">
+      {if !empty($page['password-policy']['feedbacks'])}
+        {$page['password-policy']['feedbacks']|@json_encode nofilter}
+      {/if}
+    </script>
+
+    <div class="password-strength-text"></div>
+    <div class="password-requirements">
+      <p class="password-requirements-length" data-translation="{l s='Enter a password between %s and %s characters' d='Shop.Theme.Customeraccount'}">
+        <i class="material-icons">check_circle</i>
+        <span></span>
+      </p>
+      <p class="password-requirements-score" data-translation="{l s='The minimum score must be: %s' d='Shop.Theme.Customeraccount'}">
+        <i class="material-icons">check_circle</i>
+        <span></span>
+      </p>
+    </div>
   </div>
-{/block}
+</template>
