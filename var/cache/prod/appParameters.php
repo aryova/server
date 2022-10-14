@@ -1,0 +1,25 @@
+<?php return array (
+  'parameters' => 
+  array (
+    'database_host' => '146.190.28.253',
+    'database_port' => '',
+    'database_name' => 'aryova_main_database',
+    'database_user' => 'super',
+    'database_password' => 'GSDhoiye@%%$%%lkjdslf32',
+    'database_prefix' => '',
+    'database_engine' => 'InnoDB',
+    'mailer_transport' => 'smtp',
+    'mailer_host' => '127.0.0.1',
+    'mailer_user' => NULL,
+    'mailer_password' => NULL,
+    'secret' => 'DaZF5HNQpFNEhUkw2eqm89gjfPekvh6m8ET5qrA61sZdADQrAivcpOHJx3Vcc0eq',
+    'ps_caching' => 'CacheMemcache',
+    'ps_cache_enable' => false,
+    'ps_creation_date' => '2022-10-11',
+    'locale' => 'en-US',
+    'use_debug_toolbar' => true,
+    'cookie_key' => 'W9A7S6QLI8BRjZkpjL7fCsWfU0P7S83ybR19SIbro77WWezSnu1VveL3vZddScu6',
+    'cookie_iv' => 'R7feK6Npy4wnf2oVwdXwQtGLUxQLGpfC',
+    'new_cookie_key' => 'def00000d9f84e489a1c79713cb350722382c5aabad148574730f24bcd07535bb0c20ff3e4651f8135d2713908613e7886cd285d8b384540202c3dc84b5442accd01934e',
+  ),
+);
