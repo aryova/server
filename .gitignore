@@ -150,24 +150,24 @@ themes/*/cache/*
 
 # Symfony
 
-/bin/
-/app/Resources/geoip/GeoLite2-City.mmdb
-/app/Resources/translations/*
-!/app/Resources/translations/default
-/app/config/parameters.yml
-/app/config/parameters.php
-/build/
-/phpunit.xml
-/var/*
-!/var/cache
-/var/cache/*
-!var/cache/.gitkeep
-!/var/logs
-/var/logs/*
-!var/logs/.gitkeep
-!/var/sessions
-/var/sessions/*
-!var/sessions/.gitkeep
-!var/SymfonyRequirements.php
-/vendor/
-/web/bundles/
+# /bin/
+# /app/Resources/geoip/GeoLite2-City.mmdb
+# /app/Resources/translations/*
+# !/app/Resources/translations/default
+# /app/config/parameters.yml
+# /app/config/parameters.php
+# /build/
+# /phpunit.xml
+# /var/*
+# !/var/cache
+# /var/cache/*
+# !var/cache/.gitkeep
+# !/var/logs
+# /var/logs/*
+# !var/logs/.gitkeep
+# !/var/sessions
+# /var/sessions/*
+# !var/sessions/.gitkeep
+# !var/SymfonyRequirements.php
+# /vendor/
+# /web/bundles/
