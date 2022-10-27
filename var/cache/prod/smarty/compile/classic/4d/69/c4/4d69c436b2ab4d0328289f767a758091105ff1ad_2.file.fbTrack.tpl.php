@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.43, created on 2022-10-26 23:25:21
+/* Smarty version 3.1.43, created on 2022-10-27 13:35:33
   from '/home/forge/aryova.com/modules/ps_facebook/views/templates/hook/fbTrack.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.43',
-  'unifunc' => 'content_635997b1a06044_82146127',
+  'unifunc' => 'content_635a5ef57e2768_80080901',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_635997b1a06044_82146127 (Smarty_Internal_Template $_smarty_tpl) {
+function content_635a5ef57e2768_80080901 (Smarty_Internal_Template $_smarty_tpl) {
 if (!empty($_smarty_tpl->tpl_vars['type']->value)) {?>
     
         <?php echo '<script'; ?>

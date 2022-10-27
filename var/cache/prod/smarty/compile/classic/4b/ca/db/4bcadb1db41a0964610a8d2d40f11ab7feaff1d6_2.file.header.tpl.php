@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.43, created on 2022-10-26 23:26:03
+/* Smarty version 3.1.43, created on 2022-10-27 13:35:33
   from '/home/forge/aryova.com/modules/ps_facebook/views/templates/hook/header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.43',
-  'unifunc' => 'content_635997dbc948d0_70339589',
+  'unifunc' => 'content_635a5ef57db447_25257139',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:./fbTrack.tpl' => 1,
   ),
 ),false)) {
-function content_635997dbc948d0_70339589 (Smarty_Internal_Template $_smarty_tpl) {
+function content_635a5ef57db447_25257139 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!-- Facebook Pixel Code -->
 

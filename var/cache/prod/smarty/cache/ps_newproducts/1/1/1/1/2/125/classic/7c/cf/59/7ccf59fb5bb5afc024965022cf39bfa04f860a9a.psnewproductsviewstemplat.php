@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.43, created on 2022-10-26 23:25:22
+/* Smarty version 3.1.43, created on 2022-10-26 23:59:33
   from 'module:psnewproductsviewstemplat' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.43',
-  'unifunc' => 'content_635997b284a287_94951649',
+  'unifunc' => 'content_63599fb5a81849_12201496',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -42,7 +42,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 31536000,
 ),true)) {
-function content_635997b284a287_94951649 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63599fb5a81849_12201496 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <section class="featured-products clearfix mt-3">
   <h2 class="h2 products-section-title text-uppercase">
@@ -238,10 +238,10 @@ function content_635997b284a287_94951649 (Smarty_Internal_Template $_smarty_tpl)
         
                       <a href="https://aryova.com/en/accessories/100-383-bandana-for-girls.html#/1-age-0_month/17-color-pink" class="thumbnail product-thumbnail">
               <img
-                src="https://aryova.com/232-home_default/bandana-for-girls.jpg"
+                src="https://aryova.com/238-home_default/bandana-for-girls.jpg"
                 alt="bandana for girls"
                 loading="lazy"
-                data-full-size-image-url="https://aryova.com/232-large_default/bandana-for-girls.jpg"
+                data-full-size-image-url="https://aryova.com/238-large_default/bandana-for-girls.jpg"
                 width="250"
                 height="340"
               />
@@ -841,7 +841,7 @@ function content_635997b284a287_94951649 (Smarty_Internal_Template $_smarty_tpl)
 
           
                           <div class="variant-links">
-      <a href="https://aryova.com/en/overalls/91-332-overall-with-hat-from-zero-to-six-months.html#/3-age-6_month/17-color-pink"
+      <a href="https://aryova.com/en/overalls/91-331-overall-with-hat-from-zero-to-six-months.html#/2-age-3_month/17-color-pink"
        class="color"
        title="Pink"
        aria-label="Pink"
