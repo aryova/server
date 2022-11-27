@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.43, created on 2022-10-27 06:53:25
+/* Smarty version 3.1.43, created on 2022-11-24 19:55:23
   from 'module:pscustomeraccountlinkspsc' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.43',
-  'unifunc' => 'content_635a00b594e3b0_09109949',
+  'unifunc' => 'content_637fb00b8d2387_84758457',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -18,13 +18,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 31536000,
 ),true)) {
-function content_635a00b594e3b0_09109949 (Smarty_Internal_Template $_smarty_tpl) {
+function content_637fb00b8d2387_84758457 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, array (
   'renderLogo' => 
   array (
-    'compiled_filepath' => '/home/forge/aryova.com/var/cache/prod/smarty/compile/classiclayouts_layout_left_column_tpl/57/44/d8/5744d87086a2b57406bf7536e1e7ee2bdc7487d1_2.file.helpers.tpl.php',
+    'compiled_filepath' => '/home/forge/aryova.com/var/cache/prod/smarty/compile/classiclayouts_layout_full_width_tpl/57/44/d8/5744d87086a2b57406bf7536e1e7ee2bdc7487d1_2.file.helpers.tpl.php',
     'uid' => '5744d87086a2b57406bf7536e1e7ee2bdc7487d1',
-    'call_name' => 'smarty_template_function_renderLogo_2045748297635a00b5730982_20956590',
+    'call_name' => 'smarty_template_function_renderLogo_572258497637f9a83855849_64435989',
   ),
 ));
 ?>

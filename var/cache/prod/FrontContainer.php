@@ -599,6 +599,8 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
             'doctrine_cache.contains_command' => true,
             'doctrine_cache.delete_command' => true,
             'doctrine_cache.flush_command' => true,
+            'doctrine_cache.services.doctrine.orm.default_metadata_cache.connection' => true,
+            'doctrine_cache.services.doctrine.orm.default_query_cache.connection' => true,
             'doctrine_cache.stats_command' => true,
             'employee' => true,
             'form.type.entity' => true,
@@ -2032,13 +2034,17 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
     /**
      * Gets the public 'doctrine_cache.providers.doctrine.orm.default_metadata_cache' shared service.
      *
-     * @return \Doctrine\Common\Cache\ArrayCache
+     * @return \Doctrine\Common\Cache\MemcachedCache
      */
     protected function getDoctrineCache_Providers_Doctrine_Orm_DefaultMetadataCacheService()
     {
-        $this->services['doctrine_cache.providers.doctrine.orm.default_metadata_cache'] = $instance = new \Doctrine\Common\Cache\ArrayCache();
+        $this->services['doctrine_cache.providers.doctrine.orm.default_metadata_cache'] = $instance = new \Doctrine\Common\Cache\MemcachedCache();
+
+        $a = new \Memcached();
+        $a->addServer('localhost', 11211);
 
         $instance->setNamespace('sf_orm_default_0bc4cde6528f913b28d31db832585793222843c7629cd05e1dc200ab65b7d2a5');
+        $instance->setMemcached($a);
 
         return $instance;
     }
@@ -2046,13 +2052,17 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
     /**
      * Gets the public 'doctrine_cache.providers.doctrine.orm.default_query_cache' shared service.
      *
-     * @return \Doctrine\Common\Cache\ArrayCache
+     * @return \Doctrine\Common\Cache\MemcachedCache
      */
     protected function getDoctrineCache_Providers_Doctrine_Orm_DefaultQueryCacheService()
     {
-        $this->services['doctrine_cache.providers.doctrine.orm.default_query_cache'] = $instance = new \Doctrine\Common\Cache\ArrayCache();
+        $this->services['doctrine_cache.providers.doctrine.orm.default_query_cache'] = $instance = new \Doctrine\Common\Cache\MemcachedCache();
+
+        $a = new \Memcached();
+        $a->addServer('localhost', 11211);
 
         $instance->setNamespace('sf_orm_default_0bc4cde6528f913b28d31db832585793222843c7629cd05e1dc200ab65b7d2a5');
+        $instance->setMemcached($a);
 
         return $instance;
     }
@@ -3353,15 +3363,15 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
             'mailer_user' => NULL,
             'mailer_password' => NULL,
             'secret' => 'DaZF5HNQpFNEhUkw2eqm89gjfPekvh6m8ET5qrA61sZdADQrAivcpOHJx3Vcc0eq',
-            'ps_caching' => 'CacheMemcache',
-            'ps_cache_enable' => false,
+            'ps_caching' => 'CacheMemcached',
+            'ps_cache_enable' => true,
             'ps_creation_date' => '2022-10-11',
             'locale' => 'en-US',
             'use_debug_toolbar' => true,
             'cookie_key' => 'W9A7S6QLI8BRjZkpjL7fCsWfU0P7S83ybR19SIbro77WWezSnu1VveL3vZddScu6',
             'cookie_iv' => 'R7feK6Npy4wnf2oVwdXwQtGLUxQLGpfC',
             'new_cookie_key' => 'def00000d9f84e489a1c79713cb350722382c5aabad148574730f24bcd07535bb0c20ff3e4651f8135d2713908613e7886cd285d8b384540202c3dc84b5442accd01934e',
-            'cache.driver' => 'array',
+            'cache.driver' => 'memcached',
             'kernel.bundles' => [
 
             ],
@@ -3443,6 +3453,7 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
                 68 => 'ps_featuredproducts',
                 69 => 'ps_metrics',
                 70 => 'ps_facebook',
+                71 => 'shopifyexport',
             ],
             'ps_cache_dir' => '/home/forge/aryova.com/var/cache/prod/',
             'mail_themes_uri' => '/mails/themes',

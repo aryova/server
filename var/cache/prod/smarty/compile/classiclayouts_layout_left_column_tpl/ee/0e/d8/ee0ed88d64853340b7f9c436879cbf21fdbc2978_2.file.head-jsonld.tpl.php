@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.43, created on 2022-10-27 13:35:49
+/* Smarty version 3.1.43, created on 2022-11-24 18:23:41
   from '/home/forge/aryova.com/themes/classic/templates/_partials/microdata/head-jsonld.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.43',
-  'unifunc' => 'content_635a5f052eb203_73202064',
+  'unifunc' => 'content_637f9a8d335bc0_28867893',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_635a5f052eb203_73202064 (Smarty_Internal_Template $_smarty_tpl) {
+function content_637f9a8d335bc0_28867893 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
  type="application/ld+json">
   {

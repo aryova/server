@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.43, created on 2022-10-27 13:35:49
+/* Smarty version 3.1.43, created on 2022-11-24 18:23:41
   from '/home/forge/aryova.com/themes/classic/templates/catalog/_partials/variant-links.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.43',
-  'unifunc' => 'content_635a5f054068a6_38588456',
+  'unifunc' => 'content_637f9a8d435668_44132086',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_635a5f054068a6_38588456 (Smarty_Internal_Template $_smarty_tpl) {
+function content_637f9a8d435668_44132086 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="variant-links">
   <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['variants']->value, 'variant');

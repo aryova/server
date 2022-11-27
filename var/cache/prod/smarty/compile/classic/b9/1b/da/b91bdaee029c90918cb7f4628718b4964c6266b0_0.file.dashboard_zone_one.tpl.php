@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.43, created on 2022-10-27 12:39:12
+/* Smarty version 3.1.43, created on 2022-11-24 19:07:45
   from '/home/forge/aryova.com/modules/dashactivity/views/templates/hook/dashboard_zone_one.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.43',
-  'unifunc' => 'content_635a51c064b357_93067455',
+  'unifunc' => 'content_637fa4e14e7971_42519335',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_635a51c064b357_93067455 (Smarty_Internal_Template $_smarty_tpl) {
+function content_637fa4e14e7971_42519335 (Smarty_Internal_Template $_smarty_tpl) {
 ?><section id="dashactivity" class="panel widget<?php if ($_smarty_tpl->tpl_vars['allow_push']->value) {?> allow_push<?php }?>">
 	<div class="panel-heading">
 		<i class="icon-time"></i> <?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'Activity overview','d'=>'Modules.Dashactivity.Admin'),$_smarty_tpl ) );?>

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.43, created on 2022-10-26 23:59:42
+/* Smarty version 3.1.43, created on 2022-11-24 18:23:30
   from '/home/forge/aryova.com/modules/cssmodule/cssmodule.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.43',
-  'unifunc' => 'content_63599fbe1cd662_48590660',
+  'unifunc' => 'content_637f9a82d69332_06344245',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -18,7 +18,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 31536000,
 ),true)) {
-function content_63599fbe1cd662_48590660 (Smarty_Internal_Template $_smarty_tpl) {
+function content_637f9a82d69332_06344245 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- dh42 CSS Module -->
 	<style type="text/css">
 		/*.product-miniature .highlighted-informations{*/
